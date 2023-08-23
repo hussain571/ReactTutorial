@@ -1,9 +1,8 @@
-import React, { StrictMode, useState } from "react";
+import React, { useState } from "react";
 import Navbar from "./components/Navbar";
 import TextForm from "./components/TextForm";
-// import About from "./components/About";
 
-function App() {
+function App(props) {
   const [mode, setMode] = useState("light");
 
   const toggleMode = () => {
@@ -25,8 +24,6 @@ function App() {
       <div className="container my-3">
         <TextForm mode={mode} />
       </div>
-      {/* <hr className="my-5" />
-      <About /> */}
     </>
   );
 }
