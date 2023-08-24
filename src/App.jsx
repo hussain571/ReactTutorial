@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Navbar from "./components/Navbar";
 import TextForm from "./components/TextForm";
+import About from "./components/About";
 
 function App(props) {
   const [mode, setMode] = useState("light");
@@ -10,10 +11,12 @@ function App(props) {
       setMode("dark");
       document.body.style.backgroundColor = "black";
       document.body.style.color = "white";
+      document.title = "TextUtils - Dark Mode";
     } else {
       setMode("light");
       document.body.style.backgroundColor = "white";
       document.body.style.color = "black";
+      document.title = "TextUtils - Light Mode";
     }
   };
 
